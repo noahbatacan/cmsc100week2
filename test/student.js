@@ -47,8 +47,8 @@ describe ('student', function() {
             if(err) throw err;
              res.should.have.status(200);
              res.body.should.be.an.instanceOf(Object);
-             studrec.should.have.property('name', 'Vision');
-             studrec.should.have.property('studno', '2013-89898');
+             res.body.should.have.property('name', 'Vision');
+             res.body.should.have.property('studno', '2013-89898');
              done();
             });
           });

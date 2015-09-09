@@ -35,8 +35,8 @@ describe ('student', function() {
 
     describe ("insert()", function(){
           var studrec = {
-            name: 'Vision', 
-            studno: '2013-89898'
+            'name' : 'Vision', 
+            'studno' : '2013-89898'
             };
        
           it('should put a student record', function(done) {
