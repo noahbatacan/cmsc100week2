@@ -27,15 +27,18 @@ describe ('student', function() {
              .end(function(err, res){
              if(err) throw err;
              res.should.have.status(200);
+             res.body.should.be.an.instanceOf(Object);
              done();
              });
           });
      }); 
 
     describe ("insert()", function(){
-          var studrec = 
-            {'name': 'Vision', 'studno': '2013-89898'};
-          
+          var studrec = {
+            'name' : 'Vision', 
+            'studno' : '2013-89898'
+            };
+       
           it('should put a student record', function(done) {
             request(url)
             .post('/students')
@@ -43,6 +46,9 @@ describe ('student', function() {
             .end(function(err, res){
             if(err) throw err;
              res.should.have.status(200);
+             res.body.should.be.an.instanceOf(Object);
+             studrec.should.have.property('name', 'Vision');
+             studrec.should.have.property('studno', '2013-89898');
              done();
             });
           });
