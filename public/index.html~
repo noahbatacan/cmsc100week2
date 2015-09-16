@@ -10,7 +10,7 @@
 		<form method="POST" action="http://localhost:5000/students" >
 		
 		<input type="text" name="studno" placeholder="Student Number:" pattern="^[0-9]{4}-[0-9]{5}$" required="" /> <br/>
-		<input type="password" name="name" placeholder="Name:" /><br/>
+		<input type= "text" name="name" placeholder="Name:" /><br/>
 		<input type="submit" value="Likha" />
 		
 		
